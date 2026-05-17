@@ -3,137 +3,397 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Advait Saxena | Portfolio</title>
+  <title>Advait Saxena — CS Student & Developer</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-  <div class="background-shape shape-1"></div>
-  <div class="background-shape shape-2"></div>
-  <div class="background-shape shape-3"></div>
+  <!-- NAV -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <span class="nav-name">Advait Saxena</span>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="mailto:saxenaadvait06@gmail.com" class="nav-cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
 
-  <div class="container">
-    
-    <div class="birthday-badge">
-      <i class="fas fa-birthday-cake"></i>
-      <div>
-        <span class="bday-label">Next Birthday</span>
-        <span id="bday-counter" class="bday-count">Loading...</span>
-      </div>
-    </div>
+  <main>
 
-    <div class="profile-header">
-      <div class="img-wrapper">
-        <img src="photo.jpeg" alt="Advait Saxena" class="profile-pic">
-      </div>
-      <h1>Advait Saxena</h1>
-      <p class="subtitle">BTech CSE (FinTech) Student <span class="divider">|</span> MIT Manipal</p>
-      
-      <div class="social-links">
-        <a href="mailto:advait.jsr@gmail.com" class="btn btn-icon"><i class="fas fa-envelope"></i> Email</a>
-        <a href="https://github.com/AdvaitZeroSix" target="_blank" class="btn btn-icon"><i class="fab fa-github"></i> GitHub</a>
-      </div>
-    </div>
-
-    <div class="content-grid">
-      
-      <section class="card about">
-        <h2><i class="fas fa-user-astronaut"></i> My Journey</h2>
-        <p>
-          I am a <strong>BTech CSE (FinTech)</strong> student at MIT Manipal. 
-          Originally born in <strong>Jamshedpur, Jharkhand</strong> (Oct 23, 2006), my journey took me to <strong>Faridabad</strong> for my schooling.
-        </p>
-        <p>
-          Currently, my family resides in <strong>Noida</strong>, while I pursue my engineering degree in Manipal. 
-          I am relatively new to programming but highly curious. I am building my foundation in <strong>Java, Python, and C</strong> while exploring Web Development.
-        </p>
-      </section>
-
-      <section class="card education">
-        <h2><i class="fas fa-graduation-cap"></i> Education Timeline</h2>
-        <ul class="timeline">
-          
-          <li>
-            <span class="date">Present</span>
-            <strong>Manipal Institute of Technology</strong>
-            <p>BTech CSE (FinTech) | Manipal, Karnataka</p>
-            <div class="score-badge">1st Sem GPA: 8.27</div>
-          </li>
-
-          <li>
-            <span class="date">Class 11 - 12</span>
-            <strong>Modern Delhi International School</strong>
-            <p>Sector 87, Faridabad</p>
-            <div class="score-badge">12th Boards: 88%</div>
-            <div class="score-badge secondary">JEE Main: 90.2%ile</div>
-          </li>
-
-          <li>
-            <span class="date">Class 7 - 10</span>
-            <strong>Grand Columbus International School</strong>
-            <p>Faridabad</p>
-            <div class="score-badge">10th Boards: 93%</div>
-          </li>
-
-          <li>
-            <span class="date">Kindergarten - Class 6</span>
-            <strong>Xavier School</strong>
-            <p>Gamharia, Jamshedpur</p>
-          </li>
-
-        </ul>
-      </section>
-      
-      <section class="card skills">
-        <h2><i class="fas fa-laptop-code"></i> Learning Status</h2>
-        <p class="skill-intro">Currently Studying:</p>
-        <div class="skill-tags">
-          <span>Python</span>
-          <span>Java</span>
-          <span>C Language</span>
-          <span>HTML/CSS</span>
-          <span>Web Basics</span>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="hero-label">First-year CS Student · MIT Manipal</p>
+          <h1 class="hero-name">Advait<br><em>Saxena</em></h1>
+          <p class="hero-bio">
+            B.Tech CSE student specialising in Financial Technology. 
+            Building projects at the intersection of data, computer vision, and finance — 
+            one semester at a time.
+          </p>
+          <div class="hero-actions">
+            <a href="mailto:saxenaadvait06@gmail.com" class="btn btn-primary">
+              <i class="fas fa-envelope"></i> Email Me
+            </a>
+            <a href="https://github.com/AdvaitZeroSix" target="_blank" class="btn btn-outline">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="btn btn-outline">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+          </div>
+          <div class="hero-meta">
+            <span><i class="fas fa-map-marker-alt"></i> Manipal, Karnataka</span>
+            <span class="dot">·</span>
+            <span><i class="fas fa-graduation-cap"></i> CGPA 8.23</span>
+            <span class="dot">·</span>
+            <span id="bday-counter"><i class="fas fa-birthday-cake"></i> Loading…</span>
+          </div>
         </div>
-      </section>
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-frame">
+            <img src="photo.jpeg" alt="Advait Saxena" class="hero-photo">
+          </div>
+          <div class="hero-photo-badge">
+            <i class="fas fa-trophy"></i>
+            <span>Best Project<br><small>ISTE MIT OpenCV</small></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Work</p>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-sub">Built independently during my first year — across finance, data analysis, and computer vision.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card project-featured">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-robot"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/AdvaitZeroSix" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">AI Finance Insights Platform</h3>
+            <p class="project-desc">
+              A rule-based financial analysis tool powered by the Gemini API. Analyses transaction history to surface personalised spending insights, 
+              detect overspending patterns, and flag subscription leakage — with plain-language summaries the user can actually act on.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Gemini API</span><span>Financial Analysis</span><span>Streamlit</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/AdvaitZeroSix" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Spotify Listening Analytics</h3>
+            <p class="project-desc">
+              End-to-end data analysis of personal Spotify listening history. Visualised listening behaviour, genre distribution, and 
+              track engagement trends using NumPy, Matplotlib, and Seaborn — statistical storytelling through data.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+            </div>
+            <h3 class="project-title">Stock Market Analytics Web App</h3>
+            <p class="project-desc">
+              Streamlit dashboard integrating live financial APIs for real-time stock trend visualisation. 
+              Implemented technical indicator interpretation and basic trend evaluation on market data.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Streamlit</span><span>Financial APIs</span><span>Data Viz</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-video"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/AdvaitZeroSix" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">Real-Time Green Screen System</h3>
+            <p class="project-desc">
+              A live background-replacement pipeline built with OpenCV and NumPy. 
+              Processes webcam frames in real time using colour masking for foreground-background segmentation — 
+              with no GPU or ML model required.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>OpenCV</span><span>NumPy</span><span>Computer Vision</span>
+            </div>
+          </article>
+
+          <article class="project-card project-award">
+            <div class="award-ribbon"><i class="fas fa-trophy"></i> Best Project</div>
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-circle-dot"></i></div>
+            </div>
+            <h3 class="project-title">Real-Time Ball Tracking System</h3>
+            <p class="project-desc">
+              Computer vision pipeline for detecting and tracking moving objects in live video. 
+              Outputs annotated video with highlighted object trails — 
+              awarded <strong>Best Project</strong> at the ISTE MIT OpenCV Workshop.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>OpenCV</span><span>Object Tracking</span><span>Computer Vision</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Background</p>
+          <h2 class="section-title">Education</h2>
+        </div>
+
+        <div class="timeline">
+
+          <div class="timeline-item timeline-current">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="tl-header">
+                <div>
+                  <h3>Manipal Institute of Technology</h3>
+                  <p class="tl-sub">B.Tech CSE (Financial Technology) · Manipal, Karnataka</p>
+                </div>
+                <span class="tl-date">2025 – 2029</span>
+              </div>
+              <div class="tl-badges">
+                <span class="badge badge-primary">CGPA: 8.23</span>
+                <span class="badge badge-secondary">Current</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="tl-header">
+                <div>
+                  <h3>Modern Delhi International School</h3>
+                  <p class="tl-sub">Class XI – XII (CBSE) · Faridabad</p>
+                </div>
+                <span class="tl-date">2023 – 2025</span>
+              </div>
+              <div class="tl-badges">
+                <span class="badge">12th: 86.8%</span>
+                <span class="badge">JEE Main: 90.2%ile</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="tl-header">
+                <div>
+                  <h3>Grand Columbus International School</h3>
+                  <p class="tl-sub">Class VII – X (CBSE) · Faridabad</p>
+                </div>
+                <span class="tl-date">2019 – 2023</span>
+              </div>
+              <div class="tl-badges">
+                <span class="badge">10th: 93.8%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="tl-header">
+                <div>
+                  <h3>Xavier School</h3>
+                  <p class="tl-sub">Kindergarten – Class VI · Gamharia, Jamshedpur</p>
+                </div>
+                <span class="tl-date">— 2019</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Toolkit</p>
+          <h2 class="section-title">Skills</h2>
+          <p class="section-sub">Currently learning and actively using in projects.</p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4 class="skill-group-label"><i class="fas fa-code"></i> Languages</h4>
+            <div class="skill-tags">
+              <span>Python</span>
+              <span>Java</span>
+              <span>C</span>
+              <span>SQL</span>
+              <span>HTML / CSS</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-group-label"><i class="fas fa-layer-group"></i> Libraries & Frameworks</h4>
+            <div class="skill-tags">
+              <span>OpenCV</span>
+              <span>NumPy</span>
+              <span>Matplotlib</span>
+              <span>Seaborn</span>
+              <span>Streamlit</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-group-label"><i class="fas fa-wrench"></i> Tools</h4>
+            <div class="skill-tags">
+              <span>Git & GitHub</span>
+              <span>Figma</span>
+              <span>Framer</span>
+              <span>Excel</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4 class="skill-group-label"><i class="fas fa-brain"></i> Concepts</h4>
+            <div class="skill-tags">
+              <span>Object-Oriented Programming</span>
+              <span>Data Structures & Algorithms</span>
+              <span>Computer Vision Basics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS + CLUBS -->
+    <section class="section section-alt" id="achievements">
+      <div class="container two-col-section">
+
+        <div>
+          <div class="section-header section-header-left">
+            <p class="section-label">Recognition</p>
+            <h2 class="section-title">Achievements</h2>
+          </div>
+          <ul class="achievement-list">
+            <li>
+              <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+              <div>
+                <strong>Best Project — ISTE MIT OpenCV Workshop</strong>
+                <p>Awarded for the Real-Time Ball Tracking System among all workshop participants.</p>
+              </div>
+            </li>
+            <li>
+              <div class="achievement-icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <strong>Top 50 — Cryptonite MIT CTF</strong>
+                <p>Secured an under-50 rank in the Cryptonite Capture The Flag cybersecurity competition at MIT Manipal.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="section-header section-header-left">
+            <p class="section-label">Campus</p>
+            <h2 class="section-title">Clubs</h2>
+          </div>
+          <ul class="club-list">
+            <li>
+              <strong>Rotaract Club, Manipal</strong>
+              <p>Cloth donation drives, old age home visits, blood donation camp organisation.</p>
+            </li>
+            <li>
+              <strong>IE Mechatronics Club, Manipal</strong>
+              <p>Publicity & outreach for the ROS Workshop; part of SMGD and AI & Development subsystems.</p>
+            </li>
+            <li>
+              <strong>ISTE Club, Manipal</strong>
+              <p>Assisted in publicity for Aurora 2026 TechWeek — a multi-event technical initiative.</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Advait Saxena</p>
+      <p class="footer-sub">B.Tech CSE (FinTech) · MIT Manipal · 2025–2029</p>
+      <div class="footer-links">
+        <a href="mailto:saxenaadvait06@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/AdvaitZeroSix" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <p class="footer-copy">© 2026 Advait Saxena · From Jamshedpur to Manipal</p>
     </div>
-    
-    <footer>
-      <p>&copy; 2026 Advait Saxena. From Jamshedpur to Manipal.</p>
-    </footer>
-  </div>
+  </footer>
 
   <script>
-    function updateBirthdayCounter() {
+    // Birthday countdown
+    function updateBirthday() {
       const now = new Date();
-      const currentYear = now.getFullYear();
-      const birthMonth = 9; // October is month 9 (0-indexed)
-      const birthDate = 23;
-      
-      // Create date object for next birthday
-      let nextBirthday = new Date(currentYear, birthMonth, birthDate);
-      
-      // If birthday has passed this year, set to next year
-      if (now > nextBirthday) {
-        nextBirthday.setFullYear(currentYear + 1);
-      }
-      
-      // Calculate difference in time
-      const diffTime = nextBirthday - now;
-      // Calculate difference in days (Time / (1000 * 60 * 60 * 24))
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      
-      const counterElement = document.getElementById('bday-counter');
-      
-      if (diffDays === 0) {
-        counterElement.innerHTML = "Today! 🎉";
-      } else {
-        counterElement.innerHTML = diffDays + " Days to go";
-      }
+      let next = new Date(now.getFullYear(), 9, 23); // Oct 23
+      if (now >= next) next.setFullYear(now.getFullYear() + 1);
+      const days = Math.ceil((next - now) / 86400000);
+      const el = document.getElementById('bday-counter');
+      if (days === 0) el.innerHTML = '<i class="fas fa-birthday-cake"></i> Today! 🎉';
+      else el.innerHTML = `<i class="fas fa-birthday-cake"></i> ${days}d to birthday`;
     }
+    updateBirthday();
 
-    // Run immediately
-    updateBirthdayCounter();
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.project-card, .timeline-item, .skill-group, .achievement-list li, .club-list li')
+      .forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
