@@ -390,6 +390,11 @@ button:focus-visible {
 
 .project-featured .project-icon { background: var(--bg); }
 
+.project-links {
+  display: flex;
+  gap: 8px;
+}
+
 .project-links a {
   display: inline-flex;
   align-items: center;
@@ -417,6 +422,28 @@ button:focus-visible {
   color: var(--text);
   margin-bottom: 10px;
   letter-spacing: -0.005em;
+}
+
+.project-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.project-title-row .project-title { margin-bottom: 0; }
+
+.project-status {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-bg);
+  border: 1px solid var(--award-border);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
 }
 
 .project-desc {
