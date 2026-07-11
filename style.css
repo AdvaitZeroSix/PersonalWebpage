@@ -1,3 +1,9 @@
+/* ============================================================
+   ADVAIT SAXENA — PORTFOLIO
+   Clean editorial light theme
+   Fonts: Lora (display) + Plus Jakarta Sans (body)
+   ============================================================ */
+
 :root {
   --bg:          #F5F2EE;
   --surface:     #FFFFFF;
@@ -18,6 +24,8 @@
   --radius:      14px;
   --radius-sm:   8px;
 }
+
+/* ---- RESET & BASE ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -57,6 +65,9 @@ button:focus-visible {
   margin: 0 auto;
 }
 
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
 .site-header {
   position: sticky;
   top: 0;
@@ -131,6 +142,9 @@ button:focus-visible {
 
 .nav-toggle:hover { background: var(--surface-alt); }
 
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
   padding: 80px 0 90px;
   border-bottom: 1px solid var(--border);
@@ -233,6 +247,7 @@ button:focus-visible {
 .hero-meta i { color: var(--accent); margin-right: 4px; }
 .hero-meta .dot { color: var(--border); font-weight: 700; }
 
+/* Photo */
 .hero-photo-wrap {
   position: relative;
   display: flex;
@@ -288,6 +303,10 @@ button:focus-visible {
   color: var(--text-muted);
   display: block;
 }
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
 .section { padding: 80px 0; }
 .section-alt { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
@@ -325,11 +344,16 @@ button:focus-visible {
   line-height: 1.7;
 }
 
+/* ============================================================
+   PROJECTS
+   ============================================================ */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+
+/* Featured card spans full width */
 .project-featured {
   grid-column: 1 / -1;
 }
@@ -343,7 +367,7 @@ button:focus-visible {
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   position: relative;
   overflow: hidden;
-
+  /* Fade-in initial state */
   opacity: 0;
   transform: translateY(12px);
 }
@@ -470,6 +494,10 @@ button:focus-visible {
   align-items: center;
   gap: 5px;
 }
+
+/* ============================================================
+   EDUCATION TIMELINE
+   ============================================================ */
 .timeline {
   position: relative;
   padding-left: 28px;
@@ -589,6 +617,10 @@ button:focus-visible {
   color: #065F46;
   border-color: #A7F3D0;
 }
+
+/* ============================================================
+   SKILLS
+   ============================================================ */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -648,6 +680,10 @@ button:focus-visible {
   color: var(--accent);
   border-color: rgba(29,78,216,0.25);
 }
+
+/* ============================================================
+   ACHIEVEMENTS + CLUBS
+   ============================================================ */
 .two-col-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -736,6 +772,9 @@ button:focus-visible {
   line-height: 1.6;
 }
 
+/* ============================================================
+   FOOTER
+   ============================================================ */
 .site-footer {
   background: var(--text);
   color: rgba(255,255,255,0.6);
@@ -790,6 +829,9 @@ button:focus-visible {
   margin-top: 4px;
 }
 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 @media (max-width: 800px) {
   .hero { padding: 50px 0 60px; }
 
