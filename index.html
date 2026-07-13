@@ -18,6 +18,8 @@
 </head>
 <body>
 
+  <div class="cursor-glow" id="cursorGlow"></div>
+
   <!-- NAV -->
   <header class="site-header">
     <nav class="nav-inner">
@@ -66,7 +68,8 @@
         </div>
         <div class="hero-photo-wrap">
           <div class="hero-photo-frame">
-            <img src="photo.jpeg" alt="Advait Saxena" class="hero-photo">
+            <img src="photo.jpeg" alt="Advait Saxena" class="hero-photo"
+                 onerror="this.closest('.hero-photo-wrap').style.display='none'; this.closest('.hero-grid').classList.add('hero-grid-full')">
           </div>
         </div>
       </div>
@@ -330,8 +333,25 @@
       </div>
     </section>
 
+    <!-- GITHUB ACTIVITY -->
+    <section class="section section-alt" id="activity">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-label">Activity</p>
+          <h2 class="section-title">GitHub Contributions</h2>
+          <p class="section-sub">A look at how consistently I've been shipping code.</p>
+        </div>
+        <div class="github-graph-card">
+          <img src="https://ghchart.rshah.org/C6A15B/AdvaitZeroSix" alt="Advait Saxena's GitHub contribution graph" class="github-graph" loading="lazy">
+          <a href="https://github.com/AdvaitZeroSix" target="_blank" rel="noopener noreferrer" class="github-graph-link">
+            View full profile <i class="fas fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- ACHIEVEMENTS + CLUBS -->
-    <section class="section section-alt" id="achievements">
+    <section class="section" id="achievements">
       <div class="container two-col-section">
 
         <div>
@@ -398,6 +418,13 @@
   </footer>
 
   <script>
+    // Cursor spotlight glow
+    const glow = document.getElementById('cursorGlow');
+    window.addEventListener('mousemove', (e) => {
+      glow.style.setProperty('--x', `${e.clientX}px`);
+      glow.style.setProperty('--y', `${e.clientY}px`);
+    });
+
     // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
@@ -416,7 +443,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.project-card, .timeline-item, .skill-group, .achievement-list li, .club-list li')
+    document.querySelectorAll('.project-card, .timeline-item, .skill-group, .achievement-list li, .club-list li, .github-graph-card')
       .forEach(el => observer.observe(el));
   </script>
 </body>

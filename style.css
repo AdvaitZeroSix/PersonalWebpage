@@ -69,6 +69,28 @@ button:focus-visible {
 }
 
 /* ============================================================
+   CURSOR GLOW
+   ============================================================ */
+.cursor-glow {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cursor-glow {
+    display: block;
+    background: radial-gradient(
+      520px circle at var(--x, 50%) var(--y, 50%),
+      rgba(198, 161, 91, 0.07),
+      transparent 60%
+    );
+  }
+}
+
+/* ============================================================
    NAVIGATION
    ============================================================ */
 .site-header {
@@ -277,6 +299,17 @@ button:focus-visible {
   object-position: center top;
   filter: grayscale(15%);
 }
+
+.hero-grid-full {
+  grid-template-columns: 1fr;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.hero-grid-full .hero-text { text-align: center; }
+.hero-grid-full .hero-bio { margin: 0 auto 34px; }
+.hero-grid-full .hero-actions { justify-content: center; }
+.hero-grid-full .hero-meta { justify-content: center; }
 
 /* ============================================================
    SECTIONS
@@ -656,6 +689,49 @@ button:focus-visible {
   color: var(--accent);
   border-color: var(--award-border);
 }
+
+/* ============================================================
+   GITHUB ACTIVITY
+   ============================================================ */
+.github-graph-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  overflow-x: auto;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.github-graph-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.github-graph {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+}
+
+.github-graph-link {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.github-graph-link:hover { color: var(--accent-dark); }
+.github-graph-link i { font-size: 0.72rem; }
 
 /* ============================================================
    ACHIEVEMENTS + CLUBS
