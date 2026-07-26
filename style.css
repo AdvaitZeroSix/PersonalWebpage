@@ -1,9 +1,3 @@
-/* ============================================================
-   ADVAIT SAXENA - PORTFOLIO
-   Quiet, technical theme
-   Fonts: Space Grotesk (display) + Inter (body) + IBM Plex Mono (labels/data)
-   ============================================================ */
-
 :root {
   --bg:          #101113;
   --surface:     #17181B;
@@ -28,7 +22,6 @@
   --radius-sm:   6px;
 }
 
-/* ---- RESET & BASE ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -68,9 +61,6 @@ button:focus-visible {
   margin: 0 auto;
 }
 
-/* ============================================================
-   CURSOR GLOW
-   ============================================================ */
 .cursor-glow {
   display: none;
   position: fixed;
@@ -90,9 +80,6 @@ button:focus-visible {
   }
 }
 
-/* ============================================================
-   NAVIGATION
-   ============================================================ */
 .site-header {
   position: sticky;
   top: 0;
@@ -167,9 +154,6 @@ button:focus-visible {
 
 .nav-toggle:hover { background: var(--surface-alt); }
 
-/* ============================================================
-   HERO
-   ============================================================ */
 .hero {
   padding: 76px 0 84px;
   border-bottom: 1px solid var(--border);
@@ -274,7 +258,6 @@ button:focus-visible {
 .hero-meta i { color: var(--accent); margin-right: 4px; }
 .hero-meta .dot { color: var(--border); font-weight: 700; }
 
-/* Photo */
 .hero-photo-wrap {
   position: relative;
   display: flex;
@@ -311,9 +294,6 @@ button:focus-visible {
 .hero-grid-full .hero-actions { justify-content: center; }
 .hero-grid-full .hero-meta { justify-content: center; }
 
-/* ============================================================
-   SECTIONS
-   ============================================================ */
 .section { padding: 76px 0; }
 .section-alt { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
@@ -356,16 +336,12 @@ button:focus-visible {
   line-height: 1.7;
 }
 
-/* ============================================================
-   PROJECTS
-   ============================================================ */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
 
-/* Featured card spans full width */
 .project-featured {
   grid-column: 1 / -1;
 }
@@ -378,8 +354,7 @@ button:focus-visible {
   transition: transform 0.25s ease, border-color 0.25s ease;
   position: relative;
   overflow: hidden;
-  /* Fade-in initial state */
-  opacity: 0;
+    opacity: 0;
   transform: translateY(12px);
 }
 
@@ -505,9 +480,6 @@ button:focus-visible {
 
 .project-featured .project-tags span { background: var(--bg); }
 
-/* ============================================================
-   EDUCATION TIMELINE
-   ============================================================ */
 .timeline {
   position: relative;
   padding-left: 28px;
@@ -627,9 +599,6 @@ button:focus-visible {
   border-color: var(--good-border);
 }
 
-/* ============================================================
-   SKILLS
-   ============================================================ */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -690,9 +659,6 @@ button:focus-visible {
   border-color: var(--award-border);
 }
 
-/* ============================================================
-   GITHUB ACTIVITY
-   ============================================================ */
 .github-graph-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -733,9 +699,6 @@ button:focus-visible {
 .github-graph-link:hover { color: var(--accent-dark); }
 .github-graph-link i { font-size: 0.72rem; }
 
-/* ============================================================
-   ACHIEVEMENTS + CLUBS
-   ============================================================ */
 .two-col-section {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -824,9 +787,6 @@ button:focus-visible {
   line-height: 1.6;
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
 .site-footer {
   background: #0B0C0D;
   color: rgba(234,234,234,0.55);
@@ -884,9 +844,6 @@ button:focus-visible {
   margin-top: 4px;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
 @media (max-width: 800px) {
   .hero { padding: 48px 0 56px; }
 

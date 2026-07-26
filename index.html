@@ -20,7 +20,6 @@
 
   <div class="cursor-glow" id="cursorGlow"></div>
 
-  <!-- NAV -->
   <header class="site-header">
     <nav class="nav-inner">
       <span class="nav-name">Advait Saxena</span>
@@ -38,7 +37,6 @@
 
   <main>
 
-    <!-- HERO -->
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-text">
@@ -59,6 +57,9 @@
             <a href="https://www.linkedin.com/in/advaitsaxena2306/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
               <i class="fab fa-linkedin-in"></i> LinkedIn
             </a>
+            <a href="https://leetcode.com/u/AdvaitSaxena/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+              <i class="fas fa-code"></i> LeetCode
+            </a>
           </div>
           <div class="hero-meta">
             <span><i class="fas fa-map-marker-alt"></i> Manipal, Karnataka</span>
@@ -75,7 +76,6 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section class="section" id="projects">
       <div class="container">
         <div class="section-header">
@@ -96,17 +96,15 @@
             </div>
             <div class="project-title-row">
               <h3 class="project-title">StudentHub</h3>
-              <span class="project-status">In Progress</span>
+              <span class="project-status">Live</span>
             </div>
             <p class="project-desc">
-              A full-stack campus productivity hub built week by week over the ISTE Summer School WebDev bootcamp,
-              from a static landing page to a React application with a live Express and MongoDB backend. The
-              Expense Tracker runs a complete CRUD flow against a real database, alongside a Dashboard, Notes,
-              and a Pomodoro timer. Home, Dashboard, Notes, and Pomodoro are fully live; the Expense Tracker's
-              backend deploy is in progress, with JWT auth and CI/CD planned next.
+              A full-stack student productivity platform built for the ISTE Summer School 2026 WebDev final
+              showcase, combining an Expense Tracker, a Notes module backed by MongoDB, a Task Manager, and a
+              Pomodoro timer in one dashboard, all running on a live Express and MongoDB backend.
             </p>
             <div class="project-tags">
-              <span>React</span><span>Vite</span><span>Express</span><span>MongoDB</span><span>Tailwind CSS</span><span>React Router</span>
+              <span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>Vite</span><span>Tailwind CSS</span>
             </div>
           </article>
 
@@ -130,33 +128,62 @@
 
           <article class="project-card">
             <div class="project-top">
-              <div class="project-icon"><i class="fas fa-chart-line"></i></div>
+              <div class="project-icon"><i class="fas fa-cloud"></i></div>
+              <div class="project-links">
+                <a href="https://cloudizard.onrender.com" target="_blank" rel="noopener noreferrer" title="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/AdvaitZeroSix" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
             </div>
-            <h3 class="project-title">Stock Market Analytics Web App</h3>
+            <h3 class="project-title">Cloudizard</h3>
             <p class="project-desc">
-              A Streamlit dashboard that integrates live financial APIs for real-time stock trend visualisation,
-              with technical indicator interpretation and trend evaluation built on top of the incoming market data.
+              A Flask app with a single text box that routes each question through Gemini to figure out what kind
+              of query it is before deciding what to do with it: Pokémon questions hit the PokeAPI for stats,
+              types, and abilities, weather questions get the city extracted and passed to OpenWeatherMap for
+              current conditions, and everything else is answered directly by Gemini. Deployed on Render with
+              auto-deploy from main.
             </p>
             <div class="project-tags">
-              <span>Python</span><span>Streamlit</span><span>Financial APIs</span><span>Data Viz</span>
+              <span>Python</span><span>Flask</span><span>Gemini API</span><span>PokeAPI</span><span>OpenWeatherMap API</span>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-top">
-              <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+              <div class="project-icon"><i class="fas fa-futbol"></i></div>
+              <div class="project-links">
+                <a href="https://advaitsaxena.streamlit.app/" target="_blank" rel="noopener noreferrer" title="Live Demo"><i class="fas fa-arrow-up-right-from-square"></i></a>
+                <a href="https://github.com/AdvaitZeroSix" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <h3 class="project-title">FIFA Team Performance Predictor</h3>
+            <p class="project-desc">
+              A machine learning app that predicts a football team's performance tier from the FIFA 23 Complete
+              Player Dataset, comparing Random Forest and Decision Tree models on accuracy (Random Forest: 99.2%).
+              Includes a comparison mode to see two teams' stats side by side and which rates as the stronger
+              overall.
+            </p>
+            <div class="project-tags">
+              <span>Python</span><span>Pandas</span><span>Scikit-learn</span><span>Streamlit</span>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <div class="project-icon"><i class="fas fa-diagram-project"></i></div>
               <div class="project-links">
                 <a href="https://github.com/AdvaitZeroSix" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
               </div>
             </div>
-            <h3 class="project-title">Spotify Listening Analytics</h3>
+            <h3 class="project-title">Binary Classification Neural Network from Scratch</h3>
             <p class="project-desc">
-              An end-to-end analysis of personal Spotify listening history. Cleaned and processed the raw data with
-              NumPy, then visualised listening behaviour, genre distribution, and track engagement trends with
-              Matplotlib and Seaborn to turn a year of streams into a data-driven story.
+              A binary classification neural network implemented using only NumPy, covering weight and bias
+              initialisation, ReLU and Sigmoid activations, forward propagation, binary cross-entropy loss,
+              backpropagation, and gradient descent. Benchmarked against Logistic Regression, Decision Tree, and
+              Random Forest baselines on the Breast Cancer Wisconsin dataset using Accuracy, Precision, Recall,
+              and F1 Score.
             </p>
             <div class="project-tags">
-              <span>Python</span><span>NumPy</span><span>Matplotlib</span><span>Seaborn</span>
+              <span>Python</span><span>NumPy</span><span>Machine Learning</span>
             </div>
           </article>
 
@@ -198,7 +225,6 @@
       </div>
     </section>
 
-    <!-- EDUCATION -->
     <section class="section section-alt" id="education">
       <div class="container">
         <div class="section-header">
@@ -277,7 +303,6 @@
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section class="section" id="skills">
       <div class="container">
         <div class="section-header">
@@ -333,7 +358,6 @@
       </div>
     </section>
 
-    <!-- GITHUB ACTIVITY -->
     <section class="section section-alt" id="activity">
       <div class="container">
         <div class="section-header">
@@ -350,7 +374,6 @@
       </div>
     </section>
 
-    <!-- ACHIEVEMENTS + CLUBS -->
     <section class="section" id="achievements">
       <div class="container two-col-section">
 
@@ -403,7 +426,6 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p class="footer-name">Advait Saxena</p>
@@ -412,20 +434,19 @@
         <a href="mailto:saxenaadvait06@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
         <a href="https://github.com/AdvaitZeroSix" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/advaitsaxena2306/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://leetcode.com/u/AdvaitSaxena/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fas fa-code"></i></a>
       </div>
       <p class="footer-copy">© 2026 Advait Saxena. All rights reserved.</p>
     </div>
   </footer>
 
   <script>
-    // Cursor spotlight glow
     const glow = document.getElementById('cursorGlow');
     window.addEventListener('mousemove', (e) => {
       glow.style.setProperty('--x', `${e.clientX}px`);
       glow.style.setProperty('--y', `${e.clientY}px`);
     });
 
-    // Mobile nav toggle
     const toggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
     toggle.addEventListener('click', () => navLinks.classList.toggle('open'));
@@ -433,7 +454,6 @@
       link.addEventListener('click', () => navLinks.classList.remove('open'))
     );
 
-    // Fade-in on scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
