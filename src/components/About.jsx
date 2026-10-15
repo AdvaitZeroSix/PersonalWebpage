@@ -4,12 +4,16 @@ import { profile, aboutFacts } from '../data'
 import useISTClock from '../hooks/useISTClock'
 import SectionHead from './SectionHead'
 import Counter from './Counter'
+import Equalizer from './Equalizer'
+import useMusic from '../hooks/useMusic'
+import { toggleMusic } from '../lib/music'
 import Icon from './Icon'
 
 export default function About() {
   const root = useRef(null)
   const statement = useRef(null)
   const time = useISTClock()
+  const { playing } = useMusic()
 
   useGSAP(
     () => {
@@ -114,16 +118,24 @@ export default function About() {
 
           <div className="tile t-music" onMouseMove={onMove}>
             <p className="tile-label">Hobby · Music</p>
-            <iframe
-              className="spotify"
-              title={`Spotify player: ${aboutFacts.music.title}`}
-              src={`https://open.spotify.com/embed/track/${aboutFacts.music.trackId}?utm_source=generator&theme=0`}
-              width="100%"
-              height="152"
-              frameBorder="0"
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            />
+            <div className="np">
+              <Equalizer playing={playing} />
+              <div className="np-text">
+                <b>{aboutFacts.music.title}</b>
+                <span>{aboutFacts.music.artist}</span>
+              </div>
+              <button className="np-btn" onClick={toggleMusic} aria-label={playing ? 'Pause music' : 'Play music'}>
+                <Icon name={playing ? 'pause' : 'play'} />
+              </button>
+            </div>
+            <a
+              className="np-link"
+              href={`https://open.spotify.com/track/${aboutFacts.music.trackId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Icon name="spotify" /> Open on Spotify
+            </a>
           </div>
 
           <div className="tile t-grades sem" onMouseMove={onMove}>

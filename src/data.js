@@ -23,7 +23,7 @@ export const aboutFacts = {
   ],
   design: ['Canva', 'Excel', 'Figma', 'Graphic design'],
   // Any Spotify track id works here: open a song, Share, Copy link, and take the id after /track/
-  music: { trackId: '39sDitIeCMrVX2QyXHY46t', title: 'Blue Hair by TV Girl' },
+  music: { trackId: '54X78diSLoUDI3joC2bjMz', title: 'Purple Rain', artist: 'Prince' },
 }
 
 /* ---------------------------------------------------------------- flagship */
