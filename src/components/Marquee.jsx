@@ -1,8 +1,8 @@
 import { useRef } from 'react'
 import { gsap, ScrollTrigger, useGSAP, prefersReducedMotion } from '../lib/gsap'
 
-const rowA = ['React', 'GSAP', 'Node.js', 'Express', 'MongoDB', 'Docker', 'Tailwind CSS', 'Vite']
-const rowB = ['Python', 'Scikit-learn', 'OpenCV', 'NumPy', 'FastAPI', 'Flask', 'CTF', 'Java']
+const rowA = ['React', 'GSAP', 'MongoDB', 'Tailwind CSS', 'Vite', 'Git']
+const rowB = ['Python', 'Scikit-learn', 'OpenCV', 'NumPy', 'FastAPI', 'Go', 'CTF', 'Java']
 
 function Row({ items }) {
   // content is duplicated so a -50% shift loops seamlessly

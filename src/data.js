@@ -33,7 +33,7 @@ export const flagship = {
     { value: 130, suffix: '+', label: 'Players at once' },
     { value: 30, suffix: '', label: 'Puzzle games' },
   ],
-  built: 'Built with React, Node.js and MongoDB.',
+  built: 'Built with React and MongoDB.',
   chapters: [
     {
       id: 'game',
@@ -95,7 +95,7 @@ export const projects = [
     status: 'Live',
     icon: 'layers',
     desc: 'Students juggle notes, deadlines and money across different apps. StudentHub brings an expense tracker, notes, a task list and a study timer into one dashboard. Built for the ISTE Summer School 2026 web showcase.',
-    tags: ['React', 'Node.js', 'MongoDB'],
+    tags: ['React', 'MongoDB', 'JWT'],
     live: 'https://studenthub-react.vercel.app/',
     repo: 'https://github.com/AdvaitZeroSix/studenthub_react',
   },
@@ -137,7 +137,7 @@ export const projects = [
     cover: 'router',
     icon: 'cloud',
     desc: 'One search box that works out what you are asking. Ask about a Pokémon, the weather or anything else and it sends your question to the right place and answers in plain language.',
-    tags: ['Python', 'Flask', 'Gemini API'],
+    tags: ['Python', 'Gemini API'],
     live: 'https://cloudizard.onrender.com',
     repo: 'https://github.com/AdvaitZeroSix/Cloudizard',
   },
@@ -224,10 +224,10 @@ export const education = [
 ]
 
 export const skills = [
-  { label: 'Languages', items: ['Python', 'JavaScript', 'Java', 'C', 'SQL', 'HTML / CSS'] },
+  { label: 'Languages', items: ['Python', 'Go', 'JavaScript', 'Java', 'C', 'SQL', 'PL/SQL', 'HTML / CSS'] },
   {
     label: 'Web development',
-    items: ['React', 'Vite', 'Tailwind CSS', 'GSAP', 'Node.js', 'Express', 'Flask', 'FastAPI', 'MongoDB'],
+    items: ['React', 'Vite', 'Tailwind CSS', 'GSAP', 'FastAPI', 'MongoDB'],
   },
   {
     label: 'AI & data',
@@ -239,11 +239,11 @@ export const skills = [
   },
   {
     label: 'Tools',
-    items: ['Git & GitHub', 'Docker', 'nginx', 'Postman', 'Vercel', 'Render'],
+    items: ['Git & GitHub', 'Oracle SQL*Plus', 'nginx', 'Postman', 'Vercel', 'Render'],
   },
   {
     label: 'Security & CS',
-    items: ['Digital forensics', 'OSINT', 'Web security', 'CTF write-ups', 'Data structures & algorithms', 'OOP'],
+    items: ['Digital forensics', 'OSINT', 'Web security', 'CTF write-ups', 'Data structures & algorithms', 'OOP', 'Programming paradigms'],
   },
 ]
 
