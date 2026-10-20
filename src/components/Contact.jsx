@@ -69,7 +69,7 @@ export default function Contact() {
             Contact
           </p>
           <h2 className="contact-big" ref={big}>
-            Have an idea? Let's build something together.
+            Want to talk? Send me an email.
           </h2>
 
           <div className="contact-actions">

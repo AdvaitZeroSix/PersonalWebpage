@@ -3,9 +3,9 @@ export const profile = {
   email: 'saxenaadvait06@gmail.com',
   location: 'Manipal, Karnataka',
   cgpa: '8.09',
-  bio: 'Second-year B.Tech CSE (FinTech) student at MIT Manipal. I like finding out how things work, so I build websites and AI tools, break things on purpose in CTFs, and keep fixing them until they run.',
+  bio: 'Second-year B.Tech CSE (FinTech) student at MIT Manipal. I like finding out how things work, so I build websites and small AI projects, solve security puzzles, and keep fixing things until they work.',
   about:
-    "I'm a second-year CS student at MIT Manipal, and I learn by building things and fixing them when they break. I'm curious about how everything works, from AI models to security puzzles, and I like turning that curiosity into tools people can use. Off the keyboard I enjoy listening to music, the creative side of things like graphic design, and giving back through volunteering.",
+    "I'm a second-year CS student at MIT Manipal, and I learn by building things and fixing them when they break. I'm curious about how things work, from AI models to security puzzles, and I like making small tools people can actually use. Away from the keyboard I enjoy music, graphic design and volunteering.",
   socials: {
     github: 'https://github.com/AdvaitZeroSix',
     linkedin: 'https://www.linkedin.com/in/advaitsaxena2306/',
@@ -16,21 +16,17 @@ export const profile = {
 export const aboutFacts = {
   exploring: ['Full-stack', 'Machine learning', 'Deep learning', 'Cybersecurity', 'FinTech'],
   learn: 'Build it, break it, figure out why it broke.',
-  giving: 'Cloth donation drives, old age home visits and blood donation camps with Rotaract.',
-  semesters: [
+  giving: 'Cloth donation drives, old age home visits and blood donation camps with Rotaract.',  semesters: [
     { label: 'Sem 1', value: 8.24 },
     { label: 'Sem 2', value: 7.95 },
   ],
-  design: ['Canva', 'Excel', 'Figma', 'Graphic design'],
-  // Any Spotify track id works here: open a song, Share, Copy link, and take the id after /track/
-  music: { trackId: '54X78diSLoUDI3joC2bjMz', title: 'Purple Rain', artist: 'Prince' },
-}
+  design: ['Canva', 'Excel', 'Figma', 'Graphic design'],}
 
 /* ---------------------------------------------------------------- flagship */
 export const flagship = {
   title: 'Hopeless Opus',
   tagline: 'An online puzzle-adventure game for the Acumen category at Techtatva 2026, hosted by ISTE Manipal.',
-  role: 'I was on the organising committee and built a good share of the puzzles and website pages.',
+  role: 'I was part of the team that ran it, and built a good share of the puzzles and website pages.',
   live: 'https://hopelessopus.istemanipal.com',
   stats: [
     { value: 200, suffix: '+', label: 'Registrations' },
@@ -53,7 +49,7 @@ export const flagship = {
       tab: 'Website',
       kicker: 'The website',
       title: 'One world, from the first click',
-      text: 'I redesigned the home, rules, contact and leaderboard pages so everything felt like the same ancient-temple setting, with music and smooth animations.',
+      text: 'I redesigned the home, rules, contact and leaderboard pages so everything felt like the same ancient-temple setting, with smooth animations.',
       image: '/showcase/ho-rules.jpg',
       alt: 'Hopeless Opus rules page',
     },
@@ -130,7 +126,7 @@ export const projects = [
     kind: 'Personal finance',
     cover: 'finance',
     icon: 'robot',
-    desc: 'Most people only notice where their money went after it is gone. Upload a bank statement and get a 0-100 financial health score, a warning about overspending or forgotten subscriptions, and what to fix first. Built at a hackathon.',
+    desc: 'Most people only notice where their money went after it is gone. Upload a bank statement and get a 0-100 financial health score, a warning about overspending or forgotten subscriptions, and what to fix first. Built at DevSprint, the Aurora 2026 hackathon by ISTE Manipal.',
     tags: ['Python', 'FastAPI', 'Pandas'],
     private: true,
   },
@@ -238,16 +234,16 @@ export const skills = [
     items: ['Machine learning', 'Deep learning', 'NumPy', 'Pandas', 'Scikit-learn', 'OpenCV', 'Streamlit'],
   },
   {
-    label: 'Design & office',
+    label: 'Design',
     items: ['Canva', 'Figma', 'Framer', 'Graphic design', 'Social media', 'Excel'],
   },
   {
-    label: 'Tools & deployment',
+    label: 'Tools',
     items: ['Git & GitHub', 'Docker', 'nginx', 'Postman', 'Vercel', 'Render'],
   },
   {
-    label: 'Security & CS basics',
-    items: ['Digital forensics', 'OSINT', 'Web exploitation', 'CTF write-ups', 'Data structures & algorithms', 'OOP'],
+    label: 'Security & CS',
+    items: ['Digital forensics', 'OSINT', 'Web security', 'CTF write-ups', 'Data structures & algorithms', 'OOP'],
   },
 ]
 
@@ -262,22 +258,40 @@ export const achievements = [
     title: 'Top 50 · Cryptonite MIT CTF',
     text: 'Ranked in the top 50 at the Cryptonite Capture The Flag cybersecurity competition at MIT Manipal.',
   },
+  {
+    icon: 'check',
+    title: "Certificate of Recognition · TechTatva '26",
+    text: "Recognised by MIT Manipal for service on the Acumen organising committee at TechTatva '26, the annual technical fest, held 14–17 October 2026.",
+  },
 ]
 
-export const clubs = [
+// Positions of responsibility: each club lists the committee or role I hold in it
+export const positions = [
   {
-    name: 'ISTE Club, Manipal',
-    role: 'Managing Committee Member',
-    text: 'Organising committee for the Acumen category at Techtatva 2026, and publicity for Aurora 2026 TechWeek.',
+    club: 'ISTE Club, Manipal',
+    roles: [
+      {
+        title: 'Managing Committee',
+        text: 'Part of the team running the Acumen category at Techtatva 2026, helped with publicity for Aurora 2026 TechWeek, and took part in its DevSprint hackathon.',
+      },
+    ],
   },
   {
-    name: 'IE Mechatronics Club, Manipal',
-    role: 'Managing Committee Member',
-    text: 'Work across AI & Development (machine learning and deep learning), social media and graphic design, and helped promote the ROS Workshop.',
+    club: 'IE Mechatronics Club, Manipal',
+    roles: [
+      {
+        title: 'Managing Committee',
+        text: 'I work on AI and development (machine learning and deep learning), social media and graphic design, and helped promote the ROS Workshop.',
+      },
+    ],
   },
   {
-    name: 'Rotaract Club, Manipal',
-    role: 'Member',
-    text: 'Cloth donation drives, old age home visits and blood donation camps.',
+    club: 'Rotaract Club, Manipal',
+    roles: [
+      {
+        title: 'Member',
+        text: 'Cloth donation drives, old age home visits and blood donation camps.',
+      },
+    ],
   },
 ]

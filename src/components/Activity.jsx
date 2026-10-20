@@ -70,7 +70,7 @@ export default function Activity() {
   return (
     <section className="section" id="activity" ref={root}>
       <div className="container">
-        <SectionHead index="08" label="Activity" sub="A look at how consistently I've been shipping code.">
+        <SectionHead index="08" label="Activity" sub="How much I've been coding over the past year.">
           GitHub contributions
         </SectionHead>
 

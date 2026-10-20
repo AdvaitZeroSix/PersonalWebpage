@@ -32,10 +32,10 @@ export default function Skills() {
       <div className="container">
         <SectionHead
           index="06"
-          label="Toolkit"
-          sub="Languages, frameworks and tools I use to build and ship projects."
+          label="Skills"
+          sub="Languages and tools I have used in my projects."
         >
-          The stack I reach for
+          What I work with
         </SectionHead>
 
         <div className="skills-grid">

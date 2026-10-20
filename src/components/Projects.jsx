@@ -162,8 +162,8 @@ export default function Projects() {
           Selected Work
         </div>
         <div className="container phead">
-          <SectionHead index="05" label="More work">
-            Selected projects
+          <SectionHead index="05" label="Projects">
+            Other things I've built
           </SectionHead>
           <div className="pmeta">
             <p className="pintro">

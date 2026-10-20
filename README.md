@@ -24,5 +24,5 @@ npm run preview  # serve the production build
 
 ## Editing content
 
-All text lives in [src/data.js](src/data.js): projects, education, skills, achievements, clubs and social links.
+All text lives in [src/data.js](src/data.js): projects, education, skills, achievements, positions of responsibility and social links.
 Styles are in [src/styles.css](src/styles.css); each section is a component in [src/components/](src/components/).

@@ -4,16 +4,12 @@ import { profile, aboutFacts } from '../data'
 import useISTClock from '../hooks/useISTClock'
 import SectionHead from './SectionHead'
 import Counter from './Counter'
-import Equalizer from './Equalizer'
-import useMusic from '../hooks/useMusic'
-import { toggleMusic } from '../lib/music'
 import Icon from './Icon'
 
 export default function About() {
   const root = useRef(null)
   const statement = useRef(null)
   const time = useISTClock()
-  const { playing } = useMusic()
 
   useGSAP(
     () => {
@@ -66,7 +62,7 @@ export default function About() {
     <section className="section" id="about" ref={root}>
       <div className="container">
         <SectionHead index="01" label="About me">
-          Builder, breaker, learner
+          A little about me
         </SectionHead>
 
         <p className="statement" ref={statement}>
@@ -75,7 +71,7 @@ export default function About() {
 
         <div className="bento">
           <div className="tile t-explore" onMouseMove={onMove}>
-            <p className="tile-label">Currently exploring</p>
+            <p className="tile-label">Learning right now</p>
             <ul className="chips">
               {aboutFacts.exploring.map((e) => (
                 <li className="chip" key={e}>
@@ -101,12 +97,12 @@ export default function About() {
           </div>
 
           <div className="tile t-give" onMouseMove={onMove}>
-            <p className="tile-label">Giving back</p>
+            <p className="tile-label">Volunteering</p>
             <p className="tile-sub tile-body">{aboutFacts.giving}</p>
           </div>
 
           <div className="tile t-design" onMouseMove={onMove}>
-            <p className="tile-label">Creative side</p>
+            <p className="tile-label">Design</p>
             <ul className="chips">
               {aboutFacts.design.map((d) => (
                 <li className="chip" key={d}>
@@ -114,28 +110,6 @@ export default function About() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className="tile t-music" onMouseMove={onMove}>
-            <p className="tile-label">Hobby · Music</p>
-            <div className="np">
-              <Equalizer playing={playing} />
-              <div className="np-text">
-                <b>{aboutFacts.music.title}</b>
-                <span>{aboutFacts.music.artist}</span>
-              </div>
-              <button className="np-btn" onClick={toggleMusic} aria-label={playing ? 'Pause music' : 'Play music'}>
-                <Icon name={playing ? 'pause' : 'play'} />
-              </button>
-            </div>
-            <a
-              className="np-link"
-              href={`https://open.spotify.com/track/${aboutFacts.music.trackId}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon name="spotify" /> Open on Spotify
-            </a>
           </div>
 
           <div className="tile t-grades sem" onMouseMove={onMove}>

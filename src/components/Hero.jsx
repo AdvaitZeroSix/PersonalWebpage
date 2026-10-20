@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { gsap, SplitText, useGSAP, hasFinePointer, prefersReducedMotion } from '../lib/gsap'
-import { profile, projects, achievements } from '../data'
+import { profile, projects, achievements, positions } from '../data'
 import MagneticButton from './MagneticButton'
 import Hud, { spinRings } from './Hud'
 import Icon from './Icon'
@@ -119,11 +119,11 @@ export default function Hero({ ready }) {
         </div>
         <div className="stat">
           <Counter to={achievements.length} />
-          <span>Awards & ranks</span>
+          <span>Achievements</span>
         </div>
         <div className="stat">
-          <Counter to={2} />
-          <span>Committees</span>
+          <Counter to={positions.length} />
+          <span>Clubs</span>
         </div>
       </div>
     </section>

@@ -1,14 +1,11 @@
 import { useRef } from 'react'
 import { gsap, SplitText, useGSAP, prefersReducedMotion } from '../lib/gsap'
-import { startMusic } from '../lib/music'
 import Hud, { spinRings } from './Hud'
 
 const greetingFor = (h) => (h >= 5 && h < 12 ? 'Good morning' : h >= 12 && h < 17 ? 'Good afternoon' : 'Good evening')
 
-// One-off welcome after the loader. It first waits for a click on "Enter"
-// (browsers only allow audio after a click, so this is also what starts the
-// music), then reads the visitor's local time, greets them accordingly,
-// introduces me and dissolves into the page.
+// One-off welcome after the loader. It reads the visitor's local time,
+// greets them accordingly, introduces me and dissolves into the page.
 //   onReveal  -> the page underneath may start its own entrance
 //   onFinish  -> the overlay is gone and can be unmounted
 export default function Welcome({ onReveal, onFinish }) {
@@ -16,7 +13,6 @@ export default function Welcome({ onReveal, onFinish }) {
   const timeEl = useRef(null)
   const labelEl = useRef(null)
   const tl = useRef(null)
-  const entered = useRef(false)
 
   const now = new Date()
   const greeting = greetingFor(now.getHours())
@@ -33,12 +29,11 @@ export default function Welcome({ onReveal, onFinish }) {
 
       spinRings(gsap)
 
-      // the HUD and the gate appear straight away
+      // the HUD appears straight away
       gsap
         .timeline({ defaults: { ease: 'power3.out' } })
         .from('.w-hud', { scale: 0.55, opacity: 0, duration: 1.6, ease: 'expo.out' }, 0)
         .from('.w-bracket', { opacity: 0, scale: 1.4, duration: 0.9, stagger: 0.08 }, 0.2)
-        .from('.w-gate > *', { opacity: 0, y: 16, duration: 0.8, stagger: 0.12 }, 0.5)
       gsap.set('.w-status, .w-skip', { opacity: 0 })
 
       const lines = gsap.utils.toArray('.w-line')
@@ -59,11 +54,10 @@ export default function Welcome({ onReveal, onFinish }) {
           .join('')
       }
 
-      // main sequence: paused until the visitor clicks Enter
-      const t = gsap.timeline({ paused: true, defaults: { ease: 'power3.out' } })
+      // main sequence
+      const t = gsap.timeline({ delay: 0.6, defaults: { ease: 'power3.out' } })
       tl.current = t
-      t.to('.w-gate', { opacity: 0, y: -10, duration: 0.5, pointerEvents: 'none' }, 0)
-        .to('.w-status, .w-skip', { opacity: 1, duration: 0.7 }, 0.3)
+      t.to('.w-status, .w-skip', { opacity: 1, duration: 0.7 }, 0.3)
         .to(scramble, { p: 1.05, duration: 1.3, ease: 'none', onUpdate: draw }, 0.5)
         .add(() => {
           labelEl.current.textContent = 'Local time confirmed'
@@ -83,16 +77,9 @@ export default function Welcome({ onReveal, onFinish }) {
     { scope: root },
   )
 
-  const enter = (withMusic) => {
-    if (entered.current || !tl.current) return
-    entered.current = true
-    if (withMusic) startMusic() // inside the click, so the browser allows audio
-    tl.current.play()
-  }
-
   const skip = () => {
     const t = tl.current
-    if (entered.current && t && t.time() < t.labels.exit) {
+    if (t && t.time() < t.labels.exit) {
       t.tweenTo('exit', { duration: 0.5, ease: 'power2.inOut', onComplete: () => t.play() })
     }
   }
@@ -108,16 +95,6 @@ export default function Welcome({ onReveal, onFinish }) {
       <span className="bracket w-bracket b-tr" aria-hidden="true" />
       <span className="bracket w-bracket b-bl" aria-hidden="true" />
       <span className="bracket w-bracket b-br" aria-hidden="true" />
-
-      <div className="w-gate">
-        <p className="w-gate-note">Best with sound on</p>
-        <button className="w-enter" onClick={() => enter(true)} autoFocus>
-          Enter
-        </button>
-        <button className="w-nosound" onClick={() => enter(false)}>
-          Enter without music
-        </button>
-      </div>
 
       <div className="w-status">
         <p className="w-label">

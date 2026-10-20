@@ -1035,10 +1035,7 @@ a.tile:hover {
   grid-column: span 4;
 }
 .t-grades {
-  grid-column: span 7;
-}
-.t-music {
-  grid-column: span 5;
+  grid-column: span 12;
 }
 
 .tile-quote {
@@ -2213,7 +2210,7 @@ a.tile:hover .tile-arrow {
 }
 
 /* ==========================================================================
-   Achievements & committees
+   Achievements & positions of responsibility
    ========================================================================== */
 .two-col {
   display: grid;
@@ -2320,9 +2317,17 @@ a.tile:hover .tile-arrow {
   letter-spacing: 0.1em;
   color: var(--accent);
 }
+.club-entry {
+  margin-top: 0.7rem;
+}
+.club-entry + .club-entry {
+  margin-top: 1rem;
+}
+.club-entry p {
+  margin-top: 0.5rem;
+}
 .club-role {
   display: inline-block;
-  margin-top: 0.3rem;
   padding: 0.1rem 0.6rem;
   font-family: var(--f-display);
   font-weight: 600;
@@ -2532,7 +2537,6 @@ a.tile:hover .tile-arrow {
     grid-column: span 6;
   }
   .t-design,
-  .t-music,
   .t-grades {
     grid-column: span 12;
   }
@@ -2568,7 +2572,6 @@ a.tile:hover .tile-arrow {
   .t-learn,
   .t-give,
   .t-design,
-  .t-music,
   .t-grades {
     grid-column: span 12;
   }
@@ -2596,226 +2599,6 @@ a.tile:hover .tile-arrow {
   }
   .intro-actions .btn {
     padding: 0.7rem 1.1rem;
-  }
-}
-
-/* ==========================================================================
-   Music: enter gate, equalizer, dock, now-playing tile
-   ========================================================================== */
-.w-gate {
-  position: absolute;
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  text-align: center;
-}
-.w-gate-note {
-  font-family: var(--f-display);
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.w-enter {
-  padding: 1rem 3.4rem;
-  font-family: var(--f-display);
-  font-weight: 700;
-  font-size: 1.6rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--on-accent);
-  background: var(--accent);
-  border-radius: 4px;
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-.w-enter:hover {
-  box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.6);
-  transform: translateY(-2px);
-}
-.w-nosound {
-  margin-top: 0.5rem;
-  font-family: var(--f-display);
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border-bottom: 1px solid var(--line-strong);
-  padding-bottom: 2px;
-  transition: color 0.3s;
-}
-.w-nosound:hover {
-  color: var(--fg);
-}
-
-.eq {
-  display: inline-flex;
-  align-items: flex-end;
-  gap: 3px;
-  width: 22px;
-  height: 18px;
-}
-.eq i {
-  flex: 1;
-  height: 100%;
-  background: var(--accent);
-  transform: scaleY(0.25);
-  transform-origin: bottom;
-}
-.eq.is-playing i {
-  animation: eqbar 0.9s ease-in-out infinite alternate;
-}
-.eq.is-playing i:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.eq.is-playing i:nth-child(3) {
-  animation-delay: 0.4s;
-}
-.eq.is-playing i:nth-child(4) {
-  animation-delay: 0.1s;
-}
-@keyframes eqbar {
-  from {
-    transform: scaleY(0.2);
-  }
-  to {
-    transform: scaleY(1);
-  }
-}
-
-.dock {
-  position: fixed;
-  left: var(--gutter);
-  bottom: 1.2rem;
-  z-index: 800;
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 0.5rem 0.6rem 0.5rem 0.9rem;
-  border: 1px solid var(--line-strong);
-  border-radius: 6px;
-  background: rgba(3, 10, 17, 0.8);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
-  text-align: left;
-  opacity: 0;
-  transform: translateY(20px);
-  pointer-events: none;
-  transition: opacity 0.6s, transform 0.6s, border-color 0.3s;
-}
-.dock.is-visible {
-  opacity: 1;
-  transform: none;
-  pointer-events: auto;
-}
-.dock:hover {
-  border-color: var(--accent);
-}
-.dock-text {
-  display: flex;
-  flex-direction: column;
-  min-width: 6.5rem;
-  line-height: 1.15;
-}
-.dock-text b {
-  font-family: var(--f-display);
-  font-weight: 700;
-  font-size: 1rem;
-  letter-spacing: 0.04em;
-}
-.dock-text span {
-  font-family: var(--f-display);
-  font-weight: 600;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.dock-btn {
-  width: 32px;
-  height: 32px;
-  display: grid;
-  place-items: center;
-  border-radius: 4px;
-  background: var(--accent);
-  color: var(--on-accent);
-  font-size: 0.8rem;
-}
-
-.np {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: auto;
-}
-.np .eq {
-  width: 30px;
-  height: 26px;
-}
-.np-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-.np-text b {
-  font-family: var(--f-display);
-  font-weight: 700;
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  letter-spacing: 0.02em;
-}
-.np-text span {
-  font-family: var(--f-display);
-  font-weight: 600;
-  font-size: 0.85rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
-.np-btn {
-  width: 46px;
-  height: 46px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--accent);
-  color: var(--on-accent);
-  transition: box-shadow 0.3s, transform 0.3s;
-}
-.np-btn:hover {
-  box-shadow: 0 0 24px rgba(var(--accent-rgb), 0.55);
-  transform: scale(1.06);
-}
-.np-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  align-self: flex-start;
-  font-size: 0.85rem;
-  color: var(--muted);
-  transition: color 0.3s;
-}
-.np-link:hover {
-  color: var(--accent);
-}
-
-@media (max-width: 640px) {
-  .dock {
-    bottom: 0.8rem;
-    left: 0.8rem;
-  }
-  .dock-text {
-    display: none;
-  }
-  .dock {
-    padding: 0.45rem;
-    gap: 0.6rem;
-  }
-  .w-enter {
-    padding: 0.9rem 2.6rem;
   }
 }
 

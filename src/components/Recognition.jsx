@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { gsap, useGSAP, prefersReducedMotion } from '../lib/gsap'
-import { achievements, clubs } from '../data'
+import { achievements, positions } from '../data'
 import SectionHead from './SectionHead'
 import Icon from './Icon'
 
@@ -60,16 +60,20 @@ export default function Recognition() {
 
         <div>
           <SectionHead index="03" label="Campus">
-            Committees
+            Positions of Responsibility
           </SectionHead>
           <ul className="club-list">
-            {clubs.map((c, i) => (
-              <li className="club" key={c.name}>
+            {positions.map((c, i) => (
+              <li className="club" key={c.club}>
                 <span className="club-idx">0{i + 1}</span>
                 <div>
-                  <h3>{c.name}</h3>
-                  <span className="club-role">{c.role}</span>
-                  <p>{c.text}</p>
+                  <h3>{c.club}</h3>
+                  {c.roles.map((r) => (
+                    <div className="club-entry" key={r.title}>
+                      <span className="club-role">{r.title}</span>
+                      <p>{r.text}</p>
+                    </div>
+                  ))}
                 </div>
               </li>
             ))}

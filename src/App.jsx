@@ -17,9 +17,6 @@ import Skills from './components/Skills'
 import Activity from './components/Activity'
 import Recognition from './components/Recognition'
 import Contact from './components/Contact'
-import MusicDock from './components/MusicDock'
-import { initMusic } from './lib/music'
-import { aboutFacts } from './data'
 
 export default function App() {
   // loading -> welcome (greeting overlay) -> ready (page revealed)
@@ -50,11 +47,6 @@ export default function App() {
   useEffect(() => {
     if (ready) startScroll()
   }, [ready])
-
-  // load the music player early so it is ready when the visitor clicks Enter
-  useEffect(() => {
-    initMusic(aboutFacts.music.trackId)
-  }, [])
 
   // Layout shifts (webfonts, images, pin spacers) -> recalc trigger positions.
   useEffect(() => {
@@ -87,7 +79,6 @@ export default function App() {
         <Activity />
       </main>
       <Contact />
-      <MusicDock show={ready} />
     </>
   )
 }
