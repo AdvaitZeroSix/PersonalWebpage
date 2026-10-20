@@ -16,7 +16,7 @@ export const profile = {
 export const aboutFacts = {
   exploring: ['Full-stack', 'Machine learning', 'Deep learning', 'Cybersecurity', 'FinTech'],
   learn: 'Build it, break it, figure out why it broke.',
-  giving: 'Cloth donation drives, old age home visits and blood donation camps with Rotaract.',  semesters: [
+  giving: 'Blood donation camps, cloth drives, beach clean-ups and old age home visits with Rotaract.',  semesters: [
     { label: 'Sem 1', value: 8.24 },
     { label: 'Sem 2', value: 7.95 },
   ],
@@ -25,12 +25,12 @@ export const aboutFacts = {
 /* ---------------------------------------------------------------- flagship */
 export const flagship = {
   title: 'Hopeless Opus',
-  tagline: 'An online puzzle-adventure game for the Acumen category at Techtatva 2026, hosted by ISTE Manipal.',
-  role: 'I was part of the team that ran it, and built a good share of the puzzles and website pages.',
+  tagline: 'An online puzzle-adventure game for the Acumen category at Techtatva 2026, hosted by ISTE Manipal, with players from across the country and an INR 11,000 prize pool.',
+  role: 'I was one of 9 web developers in a team of 17 (alongside 4 designers and 4 story writers). I built 5 of the puzzles and a good share of the website pages.',
   live: 'https://hopelessopus.istemanipal.com',
   stats: [
-    { value: 200, suffix: '+', label: 'Registrations' },
-    { value: 100, suffix: '+', label: 'Players at once' },
+    { value: 250, suffix: '+', label: 'Registrations' },
+    { value: 130, suffix: '+', label: 'Players at once' },
     { value: 30, suffix: '', label: 'Puzzle games' },
   ],
   built: 'Built with React, Node.js and MongoDB.',
@@ -290,7 +290,7 @@ export const positions = [
     roles: [
       {
         title: 'Member',
-        text: 'Cloth donation drives, old age home visits and blood donation camps.',
+        text: 'Helped host blood donation camps, cloth donation drives and beach clean-ups, and spent time with the elderly at old age homes. Also took part in 12+ letterhead exchanges with Rotaract clubs across India, building partnerships that let us reach and help more people together.',
       },
     ],
   },
