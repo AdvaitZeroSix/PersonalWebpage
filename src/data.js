@@ -92,8 +92,8 @@ export const projects = [
     kind: 'AI developer tool',
     cover: 'neural',
     icon: 'diagram',
-    status: 'Hackathon',
-    desc: 'Starting on an unfamiliar codebase is slow. Paste a public GitHub link and get an interactive map of which files import which, an AI-written overview, and a chat that answers questions with links to the exact files and lines. Built with a team of 4 for Hacktoberfest x MOSS Hack Day Udupi, using Gemma 4. It also ships as an agent skill that tools like Claude Code can use.',
+    status: 'Top 6',
+    desc: 'Starting on an unfamiliar codebase is slow. Paste a public GitHub link and get an interactive map of which files import which, an AI-written overview, and a chat that answers questions with links to the exact files and lines. Built with a team of 4 for Hacktoberfest x MOSS Hack Day Udupi, using Gemma 4, and made it to the top 6. It also ships as an agent skill that tools like Claude Code can use.',
     tags: ['React', 'FastAPI', 'Gemma 4', 'RAG'],
     repo: 'https://github.com/white-shn/GitToKnow',
   },
@@ -259,6 +259,11 @@ export const skills = [
 ]
 
 export const achievements = [
+  {
+    icon: 'trophy',
+    title: 'Top 6 · Hacktoberfest x MOSS Hack Day Udupi',
+    text: 'Our team reached the top 6 with GitToKnow, a tool that maps any GitHub codebase and answers questions about it using Gemma 4.',
+  },
   {
     icon: 'trophy',
     title: 'Best Project · ISTE MIT OpenCV Workshop',
