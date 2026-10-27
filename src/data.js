@@ -87,6 +87,17 @@ export const flagship = {
 // cover picks the card illustration; private = source is not public
 export const projects = [
   {
+    id: 'gittoknow',
+    title: 'GitToKnow',
+    kind: 'AI developer tool',
+    cover: 'neural',
+    icon: 'diagram',
+    status: 'Hackathon',
+    desc: 'Starting on an unfamiliar codebase is slow. Paste a public GitHub link and get an interactive map of which files import which, an AI-written overview, and a chat that answers questions with links to the exact files and lines. Built with a team of 4 for Hacktoberfest x MOSS Hack Day Udupi, using Gemma 4. It also ships as an agent skill that tools like Claude Code can use.',
+    tags: ['React', 'FastAPI', 'Gemma 4', 'RAG'],
+    repo: 'https://github.com/white-shn/GitToKnow',
+  },
+  {
     id: 'studenthub',
     title: 'StudentHub',
     kind: 'Web app',
@@ -231,7 +242,7 @@ export const skills = [
   },
   {
     label: 'AI & data',
-    items: ['Machine learning', 'Deep learning', 'NumPy', 'Pandas', 'Scikit-learn', 'OpenCV', 'Streamlit'],
+    items: ['Machine learning', 'Deep learning', 'LLM apps (RAG)', 'NumPy', 'Pandas', 'Scikit-learn', 'OpenCV', 'Streamlit'],
   },
   {
     label: 'Design',
