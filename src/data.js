@@ -191,7 +191,7 @@ export const projects = [
     icon: 'video',
     desc: 'Change your video background live without special software or a powerful computer. It spots a green cloth and swaps it for any picture. Useful for video calls, streaming and presentations.',
     tags: ['Python', 'OpenCV'],
-    repo: 'https://github.com/AdvaitZeroSix/Invisibile_OpenCV',
+    repo: 'https://github.com/AdvaitZeroSix/opencv-green-screen',
   },
   {
     id: 'ball',
