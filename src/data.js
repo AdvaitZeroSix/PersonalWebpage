@@ -158,7 +158,7 @@ export const projects = [
     kind: 'Machine learning',
     cover: 'pitch',
     icon: 'futbol',
-    desc: 'Can player stats tell you how strong a football team is? This app predicts a team’s performance level from FIFA 23 data with 99.2% accuracy and compares two teams side by side. Handy for fans, fantasy players and scouts.',
+    desc: 'Can player stats tell you how strong a football team is? This app sorts FIFA 23 teams into Weak, Average, Good and Elite tiers with a Random Forest and compares two teams side by side. Handy for fans, fantasy players and scouts.',
     tags: ['Python', 'scikit-learn', 'Streamlit'],
     live: 'https://advaitsaxena.streamlit.app/',
     repo: 'https://github.com/AdvaitZeroSix/FIFA_TeamPerformance',
